@@ -85,3 +85,9 @@ stack.h:11:6: note: declared here
       ^~~~
 Compilation failed
 1ca932e
+vi., 21 de mar. de 2025 17:30:54: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 30/70
+1934231
