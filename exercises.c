@@ -88,15 +88,12 @@ void eliminaElementos(List *L, int elem)
 
    while (auxiiar != NULL)
    {
+      void *nextNode = next(L);
       if (*(int *)auxiiar == elem)
       {
-         auxiiar = next(L);
          popCurrent(L);
       }
-      else
-      {
-         auxiiar = next(L);
-      }
+      auxiiar = nextNode;
    }
 }
 
