@@ -66,3 +66,22 @@ stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9de55e3
+vi., 21 de mar. de 2025 17:30:27: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:103:15: error: 'aux' is a pointer; did you mean to use '->'?
+       push(aux.ele);
+               ^
+               ->
+exercises.c:103:7: error: too few arguments to function 'push'
+       push(aux.ele);
+       ^~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+Compilation failed
+1ca932e
