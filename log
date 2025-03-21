@@ -14,3 +14,55 @@ vi., 21 de mar. de 2025 17:29:25:
  tests:  2|3
 total_score: 20/70
 aa871f2
+vi., 21 de mar. de 2025 17:30:00: 
+ exercises.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:99:4: error: unknown type name 'stack'
+    stack *aux = create_stack();
+    ^~~~~
+exercises.c:99:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    stack *aux = create_stack();
+                 ^~~~~~~~~~~~
+exercises.c:103:15: error: request for member 'ele' in something not a structure or union
+       push(aux.ele);
+               ^
+exercises.c:103:7: error: too few arguments to function 'push'
+       push(aux.ele);
+       ^~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:107:24: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    void *ele_dos = top(aux);
+                        ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:112:11: error: passing argument 1 of 'pop' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       pop(aux);
+           ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *pop(Stack *stack) { return popFront(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:113:21: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       ele_dos = top(aux);
+                     ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+9de55e3
