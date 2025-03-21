@@ -90,52 +90,53 @@ void eliminaElementos(List *L, int elem)
    {
       if (*(int *)auxiiar == elem)
       {
-         void *temp = auxiiar; // Guardamos referencia al nodo actual
-         auxiiar = next(L);    // Avanzamos antes de eliminar
-         popCurrent(L);        // Eliminamos el nodo
+         void *temp = auxiiar;
+         auxiiar = next(L);
+         popCurrent(L);
       }
       else
       {
-         auxiiar = next(L); // Si no se elimina, solo avanzamos
+         auxiiar = next(L);
       }
    }
+}
 
-   /*
-   Ejercicio 4.
-   La función copia los punteros de la pila P1 en la pila P2.
-   El orden de ambas pilas se debe mantener.
-   Puedes usar una pila auxiliar.
-   */
+/*
+Ejercicio 4.
+La función copia los punteros de la pila P1 en la pila P2.
+El orden de ambas pilas se debe mantener.
+Puedes usar una pila auxiliar.
+*/
 
-   void copia_pila(Stack * P1, Stack * P2)
+void copia_pila(Stack *P1, Stack *P2)
+{
+   Stack *aux = create_stack();
+   void *ele = top(P1);
+   while (ele != NULL)
    {
-      Stack *aux = create_stack();
-      void *ele = top(P1);
-      while (ele != NULL)
-      {
-         push(aux, ele);
-         pop(P1);
-         ele = top(P1);
-      }
-      void *ele_dos = top(aux);
-      while (ele_dos != NULL)
-      {
-         push(P1, ele_dos);
-         push(P2, ele_dos);
-         pop(aux);
-         ele_dos = top(aux);
-      }
-      free(aux);
+      push(aux, ele);
+      pop(P1);
+      ele = top(P1);
    }
-
-   /*
-   Ejercicio 5.
-   La función verifica si la cadena de entrada tiene sus
-   paraéntesis balanceados. Retorna 1 si están balanceados,
-   0 en caso contrario.
-   */
-
-   int parentesisBalanceados(char *cadena)
+   void *ele_dos = top(aux);
+   while (ele_dos != NULL)
    {
-      return 0;
+      push(P1, ele_dos);
+      push(P2, ele_dos);
+      pop(aux);
+      ele_dos = top(aux);
    }
+   free(aux);
+}
+
+/*
+Ejercicio 5.
+La función verifica si la cadena de entrada tiene sus
+paraéntesis balanceados. Retorna 1 si están balanceados,
+0 en caso contrario.
+*/
+
+int parentesisBalanceados(char *cadena)
+{
+   return 0;
+}
