@@ -90,7 +90,6 @@ void eliminaElementos(List *L, int elem)
    {
       if (*(int *)auxiiar == elem)
       {
-         void *temp = auxiiar;
          auxiiar = next(L);
          popCurrent(L);
       }
