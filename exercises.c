@@ -170,3 +170,5 @@ int parentesisBalanceados(char *cadena)
          free(ap);
       }
    }
+   return 1;
+}

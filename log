@@ -275,3 +275,14 @@ arraylist.c:37:6: error: 'pushFront' defined but not used [-Werror=unused-functi
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b6aff54
+vi., 21 de mar. de 2025 21:10:47: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:157:13: error: implicit declaration of function 'free_stack' [-Werror=implicit-function-declaration]
+             free_stack(aux);
+             ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+67ec9b8
