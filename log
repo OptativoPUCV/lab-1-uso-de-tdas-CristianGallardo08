@@ -189,3 +189,18 @@ vi., 21 de mar. de 2025 20:49:00:
  tests:  4|1
 total_score: 50/70
 482f091
+vi., 21 de mar. de 2025 21:07:05: 
+ exercises.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:162:12: error: 'ap' undeclared (first use in this function)
+       free(ap);
+            ^~
+exercises.c:162:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:164:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+46aeb3c
