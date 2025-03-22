@@ -153,7 +153,7 @@ int parentesisBalanceados(char *cadena)
          char *ap = pop(aux);
          if (ap == NULL)
          {
-            free_stack(aux);
+            free(aux);
             return 0;
          }
 
@@ -162,7 +162,7 @@ int parentesisBalanceados(char *cadena)
              (cad == '}' && *ap != '{'))
          {
             free(ap);
-            free_stack(aux);
+            free(aux);
             return 0;
          }
 
@@ -174,10 +174,10 @@ int parentesisBalanceados(char *cadena)
    if (resto != NULL)
    {
       free(resto);
-      free_stack(aux);
+      free(aux);
       return 0;
    }
 
-   free_stack(aux);
+   free(aux);
    return 1;
 }

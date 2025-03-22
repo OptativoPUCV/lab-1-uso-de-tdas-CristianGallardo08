@@ -303,3 +303,9 @@ exercises.c:156:13: error: implicit declaration of function 'free_stack' [-Werro
 cc1.exe: all warnings being treated as errors
 Compilation failed
 26d8517
+vi., 21 de mar. de 2025 21:18:57: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  9|0
+total_score: 70/70
+d2346d0
