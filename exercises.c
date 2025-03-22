@@ -148,13 +148,12 @@ int parentesisBalanceados(char *cadena)
          *cr = cad;
          push(aux, (void *)cr);
       }
-
       else if (cad == ')' || cad == ']' || cad == '}')
       {
          char *ap = pop(aux);
          if (ap == NULL)
          {
-            free(aux);
+            free_stack(aux);
             return 0;
          }
 
@@ -163,12 +162,22 @@ int parentesisBalanceados(char *cadena)
              (cad == '}' && *ap != '{'))
          {
             free(ap);
-            free(aux);
+            free_stack(aux);
             return 0;
          }
 
          free(ap);
       }
    }
+
+   char *resto = pop(aux);
+   if (resto != NULL)
+   {
+      free(resto);
+      free_stack(aux);
+      return 0;
+   }
+
+   free_stack(aux);
    return 1;
 }

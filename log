@@ -292,3 +292,14 @@ vi., 21 de mar. de 2025 21:13:22:
  tests:  5|1
 total_score: 50/70
 8a4a06a
+vi., 21 de mar. de 2025 21:18:28: 
+ exercises.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:156:13: error: implicit declaration of function 'free_stack' [-Werror=implicit-function-declaration]
+             free_stack(aux);
+             ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+26d8517
